@@ -20,9 +20,14 @@ def query_gpt3(prompt):
         ]
     )
     return response.choices[0].message.content.strip()  # ✅ changed syntax (no more ['content'])
+try:
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": "Hello!"}]
+    )
 except RateLimitError:
-        time.sleep(3)
-        print("Rate limit hit. Please wait and try again.")
+    print("Rate limit exceeded. Waiting 5 seconds before retry...")
+    time.sleep(5)
 
 # ✅ Streamlit UI
 st.title("Employee Information Chatbot")
