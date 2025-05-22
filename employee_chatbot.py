@@ -12,6 +12,7 @@ with open('employee_info.json') as f:
 
 # ✅ Updated GPT-3.5-turbo call using OpenAI v1.x SDK
 def query_gpt3(prompt):
+    try:
     response = client.chat.completions.create(  # ✅ changed from openai.ChatCompletion.create
         model="gpt-3.5-turbo",
         messages=[
