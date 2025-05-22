@@ -21,7 +21,8 @@ def query_gpt3(prompt):
     )
     return response.choices[0].message.content.strip()  # ✅ changed syntax (no more ['content'])
 except RateLimitError:
-        print("Rate limit hit. Please wait and try again.")
+        time.sleep(3)
+        return "⚠️ We're currently sending too many requests. Please wait a moment and try again."
 
 # ✅ Streamlit UI
 st.title("Employee Information Chatbot")
