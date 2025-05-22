@@ -1,0 +1,110 @@
+{
+  "highest_paid_employee": {
+    "employee": {
+      "name": "Sonia Mittal",
+      "designation": "Medical Doctor",
+      "location": "Kolkata",
+      "salary": 1500000,
+      "experience_years": 12
+    }
+  },
+  "employees": {
+    "more_than_5_years_experience": 13,
+    "by_city": {
+      "Bangalore": 4,
+      "Hyderabad": 5,
+      "Pune": {
+        "total_salary": 4210000,
+        "employees": [
+          {
+            "name": "Neha Joshi",
+            "designation": "Quality Assurance Analyst"
+          }
+        ]
+      },
+      "Mumbai": {
+        "average_salary": 1002000,
+        "employees": [
+          {
+            "name": "Priya Sharma",
+            "designation": "Marketing Manager",
+            "salary": 1200000
+          }
+        ]
+      },
+      "Delhi": {
+        "employees": [
+          {
+            "name": "Riya Chopra",
+            "designation": "Civil Engineer"
+          },
+          {
+            "name": "Riya Chopra",
+            "designation": "Biotechnologist"
+          },
+          {
+            "name": "Saira Khan",
+            "designation": "Quality Control Inspector",
+            "salary": 580000
+          }
+        ]
+      }
+    },
+    "city_with_highest_number_of_employees": {
+      "city": "Chennai",
+      "number_of_employees": 8
+    },
+    "least_experience": {
+      "employee": {
+        "name": "Rohan Mehra",
+        "designation": "Civil Engineer Intern",
+        "location": "Ahmedabad",
+        "experience_years": 0.5
+      }
+    },
+    "longest_tenure": {
+      "employee": {
+        "name": "Sonia Mittal",
+        "designation": "Medical Doctor",
+        "location": "Kolkata",
+        "experience_years": 12
+      }
+    }
+  },
+  "roles": {
+    "Software Architect": {
+      "name": "Arjun Mehra",
+      "salary": 1400000
+    },
+    "Financial Analyst": {
+      "name": "Isha Singh",
+      "location": "Jaipur"
+    },
+    "User Experience Designer": {
+      "name": "Deepika Verma",
+      "salary": 750000
+    },
+    "Marketing Associate": {
+      "name": "Kiara Kapoor",
+      "salary": 620000
+    },
+    "Sales Representative": {
+      "name": "Vikram Bajaj",
+      "location": "Bengaluru"
+    }
+  },
+  "salary_comparison": {
+    "Ahmedabad": {
+      "project_manager": {
+        "salary": 1100000
+      },
+      "software_developer_lead": {
+        "salary": 1350000
+      },
+      "difference": 250000
+    }
+  },
+  "combined_salary": {
+    "employees_named_yash_birla": 2330000
+  }
+}
