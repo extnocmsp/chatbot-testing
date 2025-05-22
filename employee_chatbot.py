@@ -1,6 +1,7 @@
 import streamlit as st
 import openai
 import json
+from openai import OpenAI
 from openai import RateLimitError
 
 # ✅ NEW: Use OpenAI client setup (instead of deprecated openai.api_key)
