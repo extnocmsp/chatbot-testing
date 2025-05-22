@@ -23,8 +23,8 @@ except RateLimitError:(
         return "⚠️ We're currently sending too many requests. Please wait a moment and try again.")
 
 # ✅ Streamlit UI
+st.title("Please Enter a Question")
 st.title("Employee Information Chatbot")
-
 user_input = st.text_input("Ask a question about the employees:")
 
 if st.button("Submit"):
