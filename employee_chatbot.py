@@ -14,15 +14,21 @@ with open('employee_info.json') as f:
 # ✅ Updated GPT-3.5-turbo call using OpenAI v1.x SDK
 def query_gpt3(prompt):
     try:
-        response = client.chat.completions.create(  # ✅ changed from openai.ChatCompletion.create
+        response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": prompt}])
-        return response.choices[0].message.content.strip()  # ✅ changed syntax (no more ['content'])
+                {"role": "user", "content": prompt}
+            ]
+        )
+        return response.choices[0].message.content.strip()
+    
     except RateLimitError:
         time.sleep(3)
-        return "⚠️ We're currently sending too many requests. Please wait a moment and try again."
+        return "⚠️ Too many requests to OpenAI. Please wait a moment and try again."
+    
+    except Exception as e:
+        return f"❌ An unexpected error occurred: {str(e)}"
 
 # ✅ Streamlit UI
 st.title("Please Enter a Question")
