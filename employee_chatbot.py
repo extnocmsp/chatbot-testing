@@ -12,13 +12,11 @@ with open('employee_info.json') as f:
 
 # ✅ Updated GPT-3.5-turbo call using OpenAI v1.x SDK
 def query_gpt3(prompt):
-    response = client.chat.completions.create()  # ✅ changed from openai.ChatCompletion.create
+    response = client.chat.completions.create(  # ✅ changed from openai.ChatCompletion.create
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": prompt}
-        ]
-    )
+            {"role": "user", "content": prompt}])
     return response.choices[0].message.content.strip()  # ✅ changed syntax (no more ['content'])
 except RateLimitError:
         time.sleep(3)
