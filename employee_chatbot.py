@@ -32,8 +32,10 @@ if st.button("Submit"):
     if user_input:
         # Create a prompt with the user question and the employee data
         prompt = f"Given the following employee data: {json.dumps(employee_data, indent=2)}\n\nAnswer the following question:\n{user_input}"
-        st.info("Generating your answer, please wait...")
-        time.sleep(1.5)
+        st.spinner("Generating your answer, please wait...")
+        response = chatbot_response(question, vectorstore)
+    st.success("Answer generated successfully!")
+    st.write(response)
         # Query GPT-3.5-turbo
         answer = query_gpt3(prompt)
         
