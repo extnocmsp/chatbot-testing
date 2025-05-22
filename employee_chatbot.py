@@ -23,7 +23,8 @@ def query_gpt3(prompt):
 except RateLimitError:
         time.sleep(3)
         return "⚠️ We're currently sending too many requests. Please wait a moment and try again."
-
+        except Exception as e:
+        return f"❌ An error occurred: {str(e)}"
 # ✅ Streamlit UI
 st.title("Employee Information Chatbot")
 
