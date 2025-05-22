@@ -38,7 +38,6 @@ if st.button("Submit"):
     st.write(response)
         # Query GPT-3.5-turbo
         answer = query_gpt3(prompt)
-        
         # Display the answer
         st.write("Answer:")
         st.write(answer)
