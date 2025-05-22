@@ -27,9 +27,6 @@ def query_gpt3(prompt):
         time.sleep(3)
         return "⚠️ Too many requests to OpenAI. Please wait a moment and try again."
     
-    except Exception as e:
-        return f"❌ An unexpected error occurred: {str(e)}"
-
 # ✅ Streamlit UI
 st.title("Please Enter a Question")
 st.title("Employee Information Chatbot")
