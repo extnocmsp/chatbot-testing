@@ -5,7 +5,7 @@ from openai import OpenAI
 from openai import RateLimitError
 
 # ✅ NEW: Use OpenAI client setup (instead of deprecated openai.api_key)
-client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])  # ✅ Secure best practice
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])  # ✅ Secure best practice
 
 # ✅ Load the JSON data
 with open('employee_info.json') as f:
