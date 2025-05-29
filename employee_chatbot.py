@@ -32,7 +32,7 @@ def query_gpt3(prompt):
         
 # ✅ Streamlit UI
 st.title("Please Enter a Question")
-st.title("Employee Information Chatbot")
+st.title("Splan Information Chatbot")
 user_input = st.text_input("Ask a question about the employees:")
 
 if st.button("Submit"):
