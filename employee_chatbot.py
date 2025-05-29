@@ -8,7 +8,7 @@ from openai import RateLimitError
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])  # ✅ Secure best practice
 
 # ✅ Load the JSON data
-with open('employee_info.json') as f:
+with open('data_splan_com_visitor-management-piam-blogs_part_1.json') as f:
     employee_data = json.load(f)
 
 # ✅ Updated GPT-3.5-turbo call using OpenAI v1.x SDK
