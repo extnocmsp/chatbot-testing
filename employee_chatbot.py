@@ -1,4 +1,4 @@
-import streamlit as st
+pimport streamlit as st
 import openai
 import json
 import time  # ✅ FIXED: Import time at the top
@@ -28,7 +28,7 @@ except Exception as e:
     client = None
 
 # ✅ Load the JSON data
-# with open('data_splan_com_visitor-management-piam-blogs_part_1.json') as f:
+# with open('employee_info.json') as f:
 #     employee_data = json.load(f)
     #employee_info.json
 with open('employee_info.json') as f:
